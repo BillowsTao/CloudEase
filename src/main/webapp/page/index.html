@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html class="mdc-typography" lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--样式库-->
+    <meta name="description" content="Cloud Ease Community,a communication to each other."/>
+    <link rel="icon" href="../resource/web.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="../resource/web.ico" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="../css/plugin/icon.css"/>
+    <link rel="stylesheet" type="text/css" href="../theme/font/font.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/plugin/material.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="../webuploader-0.1.5/webuploader.css">
+    <!--引入emojicss-->
+    <!--<link rel="stylesheet" type="text/css" href="../emojionearea/dist/emojionearea.min.css" media="screen">-->
+    <title>云逸社区</title>
+</head>
+<body>
+
+<div class="cloud-layout mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <!-- mdl-layout--no-desktop-drawer-button 响应移动端隐藏抽屉按钮 -->
+    <header class="cloud-header mdl-layout__header mdl-layout__header--waterfall">
+        <!-- 头区域 -->
+        <div class="mdl-layout__header-row">
+            <!-- 标题 -->
+            <div class="cloud-logo mdl-layout-icon"><img class="cloud-logo-image" src="../resource/img/logo_blue.png"/>
+            </div>
+            <span class="cloud-title mdl-layout-title">云逸社区</span>
+            <!-- 添加空白区域，使桌面端导航显示靠右 -->
+            <div class="mdl-layout-spacer"></div>
+            <!-- 导航按钮 -->
+            <nav class="cloud-navigation mdl-navigation">
+                <a class="cloud-navigation__link mdl-layout--large-screen-only mdl-navigation__link" href="#">
+                    <i class="cloud-navigation__link--ico material-icons">home</i>主页
+                </a>
+                <a class="cloud-navigation__link mdl-layout--large-screen-only mdl-navigation__link" href="#">
+                    <i class="cloud-navigation__link--ico material-icons">chat_bubble</i>好友
+                </a>
+            </nav>
+            <!-- 头像栏 -->
+            <div class="cloud-avator cloud-navigation-avator">
+                <img class="cloud-avator__img cloud-login-avator__img" src="../resource/avator/avator_1.png" width="35px" height="35px"
+                     alt="avator"/>
+            </div>
+        </div>
+    </header>
+
+    <div class="mdl-layout__drawer">
+        <!-- 侧边抽屉内容 -->
+        <span class="mdl-layout-title">云逸社区</span>
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="">主页</a>
+            <a class="mdl-navigation__link" href="">好友</a>
+        </nav>
+    </div>
+
+    <main class="cloud-layout__content mdl-layout__content">
+        <!-- 内容布局区域 -->
+        <div class="cloud-page-container mdl-grid">
+
+            <!-- 页面容器 -->
+            <div class="cloud-dashboard-left mdl-cell mdl-cell--3-col mdl-cell--3-col-tablet mdl-cell--hide-phone">
+                <!-- 左侧面板 -->
+                <div class="cloud-page-user">
+                    <!-- 用户面板 -->
+                    <div class="cloud-dashboard_bg">
+                        <!-- 用户面板背景 -->
+                    </div>
+                    <div class="cloud-dashboard_profile-container">
+                        <!-- 用户面板属性 -->
+                        <a class="dashboard_profile-avator__img-link">
+                            <img class="dashboard_profile-avator__img cloud-login-avator__img"
+                                 src="../resource/avator/avator_1.png" width="72px" height="72px" alt="User"/>
+                        </a>
+                        <div class="dashboard_profile-userinfo">
+                            <div class="dashboard_profile-userinfo__name">用户昵称</div>
+                            <div class="dashboard_profile-userinfo__id-container">@<span
+                                    class="dashboard_profile-userinfo__id">用户名</span></div>
+                        </div>
+                        <div class="dashboard_profile-state">
+                            <ul class="dashboard_profile-state__container">
+                                <li class="dashboard_profile-state__item">
+                                    <span class="dashboard_profile-state__item-title">动态数</span>
+                                    <span class="dashboard_profile-state-moments-num dashboard_profile-state__item-content"></span>
+                                </li>
+                                <li class="dashboard_profile-state__item">
+                                    <span class="dashboard_profile-state__item-title">关注</span>
+                                    <span class="dashboard_profile-state-following-num dashboard_profile-state__item-content"></span>
+                                </li>
+                                <li class="dashboard_profile-state__item">
+                                    <span class="dashboard_profile-state__item-title">粉丝</span>
+                                    <span class="dashboard_profile-state-follower-num dashboard_profile-state__item-content"></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cloud-page-trend">
+                    <div class="cloud-page-trend-container">
+                        <div class="trend__header"><span class="trend__header-title">热点推荐</span></div>
+                        <div class="trend__content">
+                            <ul class="trend__content-list">
+                                <li class="trend__content-item">
+                                    <a class="trend__content-item__link"
+                                       href="https://item.btime.com/31gsvigngjr9jj9keh2vmrdcj5h" target="_blank">
+                                        <span class="trend__content-item__title">习近平集体会见北欧和波罗的海国家议长</span>
+                                        <span class="trend__content-item__state">326.9K 关注</span>
+                                    </a>
+                                </li>
+                                <li class="trend__content-item">
+                                    <a class="trend__content-item__link"
+                                       href="https://item.btime.com/3430qnh9tqf99bo81oc4pqvj9o8" target="_blank">
+                                        <span class="trend__content-item__title">中纪委曝光孙政才黄兴国周本顺等人共同问题</span>
+                                        <span class="trend__content-item__state">232.0K 关注</span>
+                                    </a>
+                                </li>
+                                <li class="trend__content-item">
+                                    <a class="trend__content-item__link"
+                                       href="https://item.btime.com/361hrrksbcn8r2o1j1d051omvlq" target="_blank">
+                                        <span class="trend__content-item__title">你我的新时代，全面小康一个都不能少</span>
+                                        <span class="trend__content-item__state">90.2K 关注</span>
+                                    </a>
+                                </li>
+                                <li class="trend__content-item">
+                                    <a class="trend__content-item__link"
+                                       href="https://item.btime.com/36e2dj21jdi9sl895m6ekmmu8ii" target="_blank">
+                                        <span class="trend__content-item__title">重磅宣布：这些二线城市租房能落户 炒房者要遭殃</span>
+                                        <span class="trend__content-item__state">23.7K 关注</span>
+                                    </a>
+                                </li>
+                                <li class="trend__content-item">
+                                    <a class="trend__content-item__link"
+                                       href="https://item.btime.com/35es442fqft9s5p6f3mcg42nluj" target="_blank">
+                                        <span class="trend__content-item__title">暗流涌动，这个邻国正大挖中国墙角</span>
+                                        <span class="trend__content-item__state">13.7K 关注</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cloud-page-main mdl-cell mdl-cell--6-col mdl-cell--5-col-tablet">
+                <!-- 主面板 -->
+                <div class="timeline-moments-box-container">
+                    <!-- 快捷动态盒子 -->
+                    <div class="timeline-moments-box">
+                        <div class="cloud-avator timeline-moments-box__avator">
+                            <img class="cloud-avator__img cloud-login-avator__img" src="../resource/avator/avator_1.png" width="32px"
+                                 height="32px" alt="avator"/>
+                        </div>
+                        <div class="timeline-moments-box__edit-area">
+                            <!-- 快捷动态盒子输入区域 -->
+                            <div class="moment-box__input-container">
+                                <textarea class="moment-box__input" type="text" rows="1" placeholder="和朋友分享你的此刻"
+                                          maxlength="280"></textarea>
+                                <div class="moment-box__number-progress mdl-progress mdl-js-progress"></div>
+                            </div>
+                            <!-- 快捷动态盒子预览区域 -->
+                            <div class="moment-box__preview">
+                            </div>
+                            <!-- 快捷动态盒子工具栏区域 -->
+                            <div class="moment-box__toolbar mdl-grid">
+                                <button id="moment-box__button-photo"
+                                        class="moment-box__button mdl-button mdl-js-button mdl-js-ripple-effect mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--2-col-phone">
+                                    <i class="material-icons">insert_photo</i>
+                                </button>
+                                <button id="moment-box__button-face"
+                                        class="moment-box__button mdl-button mdl-js-button mdl-js-ripple-effect mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet mdl-cell--2-col-phone">
+                                    <i class="material-icons">insert_emoticon</i>
+                                </button>
+                                <div class="moment-box__button mdl-cell mdl-cell--5-col mdl-cell--2-col-tablet mdl-cell--hide-phone"></div>
+                                <button id="moment-box__button-publish"
+                                        class="moment-box__button moment-box__button-submit mdl-button mdl-js-button mdl-js-ripple-effect mdl-cell mdl-cell--3-col mdl-cell--2-col-tablet mdl-cell--4-col-phone">
+                                    <div class="moment-box__button-font">发&nbsp;布</div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <ol class="timeline-stream">
+                    <!-- 动态流容器，放置发布的动态容器 -->
+                </ol>
+                <!-- 加载更多按钮 -->
+                <div class="cloud-load-more">
+                    <button class="cloud-load-more__button mdl-button mdl-js-button mdl-js-ripple-effect">
+                        加&nbsp;载&nbsp;更&nbsp;多
+                    </button>
+                </div>
+            </div>
+
+            <div class="cloud-dashboard-right mdl-cell mdl-cell--3-col mdl-cell--hide-tablet mdl-cell--hide-phone">
+                <!-- 右侧面板 -->
+                <div class="cloud-page-about">
+                    <div>@ 2018 青岛理工大学 计算机工程学院</div>
+                    <div>软件151班 课程设计</div>
+                    <div>后端开发 丁星</div>
+                    <div>前端开发 王海涛</div>
+                    <div>版权所有，侵权必究</div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+</div>
+
+<!--框架库-->
+<script type="text/javascript" src="../js/plugin/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../js/plugin/material.min.js">
+</script>
+<!--引入emoji JS-->
+<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/1.5.2/lib/js/emojione.min.js"></script>-->
+<!--<script type="text/javascript" src="http://mervick.github.io/lib/google-code-prettify/prettify.js"></script>-->
+<!--<script type="text/javascript" src="../emojionearea/dist/emojionearea.js"></script>-->
+<script type="text/javascript" src="../webuploader-0.1.5/webuploader.js"></script>
+
+<script type="text/javascript" src="../js/index.js"></script>
+</body>
+</html>

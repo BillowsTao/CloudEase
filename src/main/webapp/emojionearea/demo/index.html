@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <title>Emojione-area by mervick</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/emojione/1.5.2/assets/sprites/emojione.sprites.css" media="screen">-->
+  <link rel="stylesheet" type="text/css" href="../dist/emojionearea.min.css" media="screen">
+  <script src="http://cdn.static.runoob.com/libs/jquery/2.2.0/jquery.min.js"></script>
+  <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/1.5.2/lib/js/emojione.min.js"></script>-->
+  <script type="text/javascript" src="http://mervick.github.io/lib/google-code-prettify/prettify.js"></script>
+  <script type="text/javascript" src="../dist/emojionearea.js"></script>
+  <style>
+    .clearfix:after {
+      content: " ";
+      display: table;
+      clear: both;
+    }
+  </style>
+</head>
+<body onload="">
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <textarea id="demo">Default :smile:</textarea>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+      $("#demo").emojioneArea({
+        pickerPosition: "bottom",
+        tonesStyle: "bullet"
+      });
+    });
+</script>
+
+</body>
+</html>

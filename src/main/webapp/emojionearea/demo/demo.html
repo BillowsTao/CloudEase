@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Open+Sans:400,700'>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" media="screen">
+  <!--<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/emojione/1.5.2/assets/sprites/emojione.sprites.css" media="screen">-->
+  <link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="../dist/emojionearea.min.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="http://mervick.github.io/lib/google-code-prettify/skins/tomorrow.css" media="screen">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/1.5.2/lib/js/emojione.min.js"></script>-->
+  <script type="text/javascript" src="http://mervick.github.io/lib/google-code-prettify/prettify.js"></script>
+  <script type="text/javascript" src="../dist/emojionearea.js"></script>
+  </head>
+<body>
+        <div class="clearfix">
+                <div class="row">
+                  <div class="col-6">
+                    <p>From:</p>
+                        <textarea id="demo1">
+              Lorem ipsum dolor 😍 sit amet, consectetur 👻 adipiscing elit, 🖐 sed do eiusmod tempor ☔ incididunt ut labore et dolore magna aliqua 🐬.
+              </textarea>
+                  </div>
+                  <div class="col-6">
+                    <p>To:</p>
+                    <div id="container"></div>
+                  </div>
+                </div>
+              </div>
+    <script type="text/javascript">
+    $(document).ready(function() {
+      $("#test").emojioneArea({
+        container: "#container",
+        hideSource: false,
+        useSprite: false
+      });
+    });
+  </script>
+</body>
+</html>

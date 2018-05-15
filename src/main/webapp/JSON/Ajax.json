@@ -1,0 +1,451 @@
+[
+  {
+    "url": "modify.do",
+    "type": "POST",
+    "info": "修改头像",
+    "data": {
+      "type": "avator",
+      "imgStr": "图片base64编码"
+    },
+    "dataType": "Text",
+    "returnDate": [
+      {
+        "stateCode": "success_08",
+        "info": "修改成功"
+      },
+      {
+        "stateCode": "error_08",
+        "info": "修改失败"
+      },
+      {
+        "stateCode": "error",
+        "info": "未知错误"
+      }
+    ]
+  },
+  {
+    "url": "create.do",
+    "type": "POST",
+    "info": "用户注册",
+    "data": {
+      "type": "user",
+      "userNo": "用户名 唯一的那个",
+      "userName": "昵称",
+      "password": "密码",
+      "userEmail": "邮箱",
+      "userPhone": "电话"
+    },
+    "dataType": "Text",
+    "returnDate": [
+      {
+        "stateCode": "success_01",
+        "info": "注册成功"
+      },
+      {
+        "stateCode": "error_01",
+        "info": "注册失败"
+      },
+      {
+        "stateCode": "error",
+        "info": "未知错误"
+      }
+    ]
+  },
+  {
+    "url": "getInfo.do",
+    "type": "POST",
+    "info": "得到一个推文的具体信息",
+    "data": {
+      "type": "twitter",
+      "twitterId": "被查找的推文的id"
+    },
+    "dataType": "JSON",
+    "returnDate": {
+      "userName": "拥有者昵称",
+      "userNo": "拥有者账户名",
+      "userAvatorUrl": "拥有者头像路径",
+      "twitterId": "唯一编码",
+      "twitterOwner": "拥有者的账户号",
+      "twitterContent": "正文内容",
+      "twitterDate": "提出日期",
+      "likeNum": "喜欢的数量",
+      "replyNum": "回复的数量",
+      "transpondNum": "转发的数量",
+      "twitterImgUrl": "图片url",
+      "isLike": "是否当前登陆人喜欢的",
+      "replyInfos": [
+        {
+          "replyId": "回复的id",
+          "userNo": "回复的用户的 用户名",
+          "userAvatorUrl": "头像路径",
+          "userName": "回复用户的 昵称",
+          "replyDate": "回复的日期",
+          "replyContent": "回复的内容"
+        }
+      ]
+    }
+  },
+  {
+    "url": "getInfo.do",
+    "type": "POST",
+    "info": "得到一个用户的信息",
+    "data": {
+      "type": "user",
+      "userNo": "被查找的用户的 用户名"
+    },
+    "dataType": "JSON",
+    "returnDate": {
+      "userId": "用户Id值",
+      "userAccount": "用户名",
+      "userName": "昵称",
+      "userPhone": "手机号",
+      "userEmail": "邮箱",
+      "userPassword": "密码",
+      "personalInfo": "个人简介",
+      "follwNum": "粉丝数量",
+      "starNum": "关注数量",
+      "twitterNum": "推文数量"
+    }
+  },
+  {
+    "url": "getInfo.do",
+    "type": "POST",
+    "info": "一个用户所有关注人的信息",
+    "data": {
+      "type": "stars"
+    },
+    "dataType": "JSON",
+    "returnDate": [
+      {
+        "userId": "用户Id值",
+        "userAccount": "用户名",
+        "userName": "昵称",
+        "userPhone": "手机号",
+        "userEmail": "邮箱",
+        "userPassword": "密码",
+        "personalInfo": "个人简介",
+        "follwNum": "粉丝数量",
+        "starNum": "关注数量",
+        "twitterNum": "推文数量"
+      }
+    ]
+  },
+  {
+    "url": "getInfo.do",
+    "type": "POST",
+    "info": "得到登陆人的信息",
+    "data": {
+      "type": "loginUser"
+    },
+    "dataType": "JSON",
+    "returnDate": {
+      "userId": "用户Id值",
+      "userAccount": "用户名",
+      "userName": "昵称",
+      "userPhone": "手机号",
+      "userEmail": "邮箱",
+      "userPassword": "密码",
+      "personalInfo": "个人简介",
+      "follwNum": "粉丝数量",
+      "starNum": "关注数量",
+      "twitterNum": "推文数量"
+    }
+  },
+  {
+    "url": "getInfo.do",
+    "type": "POST",
+    "info": "邮箱是否已存在",
+    "data": {
+      "type": "isExistEmail",
+      "email": "被检查的邮箱地址"
+    },
+    "dataType": "Text",
+    "returnDate": [
+      {
+        "stateCode": "notExist",
+        "info": "没被使用过,可以用"
+      },
+      {
+        "stateCode": "Existed",
+        "info": "被使用过 不能用"
+      },
+      {
+        "stateCode": "error",
+        "info": "未知错误"
+      }
+    ]
+  },
+  {
+    "url": "getInfo.do",
+    "type": "POST",
+    "info": "用户名是否已存在",
+    "data": {
+      "type": "isExistNo",
+      "userNo": "被检查的用户名"
+    },
+    "dataType": "Text",
+    "returnDate": [
+      {
+        "stateCode": "notExist",
+        "info": "没被使用过,可以用"
+      },
+      {
+        "stateCode": "Existed",
+        "info": "被使用过 不能用"
+      },
+      {
+        "stateCode": "error",
+        "info": "未知错误"
+      }
+    ]
+  },
+  {
+    "url": "remove.do",
+    "type": "POST",
+    "info": "取消点赞",
+    "data": {
+      "type": "like",
+      "like": "被取消点赞的推文id"
+    },
+    "dataType": "Text",
+    "returnDate": [
+      {
+        "stateCode": "success_07",
+        "info": "取消点赞成功"
+      },
+      {
+        "stateCode": "error_07",
+        "info": "取消点赞失败"
+      },
+      {
+        "stateCode": "error",
+        "info": "未知错误"
+      }
+    ]
+  },
+  {
+    "url": "remove.do",
+    "type": "POST",
+    "info": "删除推文",
+    "data": {
+      "type": "twitter",
+      "twitterId": "被删除的推文id"
+    },
+    "dataType": "Text",
+    "returnDate": [
+      {
+        "stateCode": "success_10",
+        "info": "删除推文成功"
+      },
+      {
+        "stateCode": "error_10",
+        "info": "删除推文失败"
+      },
+      {
+        "stateCode": "error",
+        "info": "未知错误"
+      }
+    ]
+  },
+  {
+    "url": "add.do",
+    "type": "POST",
+    "info": "回复推文",
+    "data": {
+      "type": "reply",
+      "twitterId": "点赞的推特的id",
+      "replyContent": "回复内容"
+    },
+    "dataType": "Text",
+    "returnDate": [
+      {
+        "stateCode": "success_09",
+        "info": "回复成功"
+      },
+      {
+        "stateCode": "error_09",
+        "info": "回复失败"
+      },
+      {
+        "stateCode": "error",
+        "info": "未知错误"
+      }
+    ]
+  },
+  {
+    "url": "add.do",
+    "type": "POST",
+    "info": "点赞(喜欢)推文",
+    "data": {
+      "type": "like",
+      "like": "被点赞的推文id"
+    },
+    "dataType": "Text",
+    "returnDate": [
+      {
+        "stateCode": "success_06",
+        "info": "点赞成功"
+      },
+      {
+        "stateCode": "error_06",
+        "info": "点赞失败"
+      },
+      {
+        "stateCode": "error",
+        "info": "未知错误"
+      }
+    ]
+  },
+  {
+    "url": "add.do",
+    "type": "POST",
+    "info": "增加一个关注",
+    "data": {
+      "type": "star",
+      "star": "被关注人的用户名"
+    },
+    "dataType": "Text",
+    "returnDate": [
+      {
+        "stateCode": "success_02",
+        "info": "关注成功"
+      },
+      {
+        "stateCode": "error_02",
+        "info": "关注失败"
+      },
+      {
+        "stateCode": "error",
+        "info": "未知错误"
+      }
+    ]
+  },
+  {
+    "url": "create.do",
+    "type": "POST",
+    "info": "创建推文",
+    "data": {
+      "type": "twitter",
+      "twitterContent": "推文内容",
+      "imgUrl": "图片Url"
+    },
+    "dataType": "Text",
+    "returnDate": [
+      {
+        "stateCode": "success_04",
+        "info": "创建推文成功"
+      },
+      {
+        "stateCode": "error_04",
+        "info": "创建推文失败"
+      },
+      {
+        "stateCode": "error",
+        "info": "未知错误"
+      }
+    ]
+  },
+  {
+    "url": "remove.do",
+    "type": "POST",
+    "info": "取消关注",
+    "data": {
+      "type": "star",
+      "star": "被取消人的账户号"
+    },
+    "dataType": "Text",
+    "returnDate": [
+      {
+        "stateCode": "success_03",
+        "info": "取消关注成功"
+      },
+      {
+        "stateCode": "error_03",
+        "info": "取消关注失败"
+      },
+      {
+        "stateCode": "error",
+        "info": "未知错误"
+      }
+    ]
+  },
+  {
+    "url": "findTwitter.do",
+    "type": "POST",
+    "info": "主页得到推文简要信息",
+    "data": {
+      "type": "homeTwitter",
+      "lastId": "最后一个推特的id",
+      "rows": "一次显示多少"
+    },
+    "dataType": "JSON",
+    "returnDate": [
+      {
+        "userName": "拥有者昵称",
+        "userNo": "拥有者账户名",
+        "userAvatorUrl": "拥有者头像路径",
+        "twitterId": "唯一编码",
+        "twitterOwner": "拥有者的账户号",
+        "twitterContent": "正文内容",
+        "twitterDate": "提出日期",
+        "isLike": "登陆人是否点赞",
+        "likeNum": "喜欢的数量",
+        "replyNum": "回复的数量",
+        "transpondNum": "转发的数量",
+        "twitterImgUrl": "图片url",
+        "isLike": "是否当前登陆人喜欢的"
+      }
+    ]
+  },
+  {
+    "url": "findTwitter.do",
+    "type": "POST",
+    "info": "根据用户名得到其下所有推文",
+    "data": {
+      "type": "ByUserNo",
+      "userNo": "用户名"
+    },
+    "dataType": "JSON",
+    "returnDate": [
+      {
+        "userName": "拥有者昵称",
+        "userNo": "拥有者账户名",
+        "userAvatorUrl": "拥有者头像路径",
+        "twitterId": "唯一编码",
+        "twitterOwner": "拥有者的账户号",
+        "twitterContent": "正文内容",
+        "twitterDate": "提出日期",
+        "isLike": "登陆人是否点赞",
+        "likeNum": "喜欢的数量",
+        "replyNum": "回复的数量",
+        "transpondNum": "转发的数量",
+        "twitterImgUrl": "图片url",
+        "isLike": "是否当前登陆人喜欢的"
+      }
+    ]
+  },
+  {
+    "url": "login.do",
+    "type": "POST",
+    "info": "登陆",
+    "data": {
+      "userEmail": "邮箱",
+      "userPassword": "密码"
+    },
+    "dataType": "Text",
+    "returnDate": [
+      {
+        "stateCode": "success_05",
+        "info": "登陆成功"
+      },
+      {
+        "stateCode": "error_05",
+        "info": "登录失败"
+      },
+      {
+        "stateCode": "error",
+        "info": "未知错误"
+      }
+    ]
+  }
+]

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="CloudEase:war">
+    <output-path>$PROJECT_DIR$/../../tomcat for IDEA/webapps</output-path>
+    <root id="archive" name="CloudEase.war">
+      <element id="artifact" artifact-name="CloudEase:war exploded" />
+    </root>
+  </artifact>
+</component>
